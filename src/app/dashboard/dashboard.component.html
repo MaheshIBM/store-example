@@ -1,0 +1,8 @@
+<div class="animated fadeIn">
+  <h3>Dashboard component</h3> 
+  <div>
+      <app-test [name]='appTestName' (appButtonClicked)='appTestClicked($event)'></app-test>
+      <app-error [error]='error'></app-error>
+      <app-auth [auth]='auth' [buttonText]='buttonText' (login)='onLogin($event)' (logout)='onLogout($event)'> </app-auth>
+</div>
+</div>

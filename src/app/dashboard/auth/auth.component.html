@@ -1,0 +1,12 @@
+<div style="padding: 20px; border-color: blue;background-color: aliceblue;border-width: 2px;border-style:solid">
+<h4>Auth Component </h4>
+
+<div> Id of the auth: <input type='text' id='authId' [(ngModel)]='idText' /> </div>
+<div> {{idText}} </div>
+    <div><button id='btnLogin' (click)='loginLogout($event)'>{{ buttonText }}</button></div>
+    <div> Auth is logged in {{ auth.isLoggedIn }} </div>
+    <div>Some value to change on every click {{ counter }}</div> 
+
+    <div><button text='Rx Test' (click)='rxTest($event)'>Rx Test</button> </div>
+  </div>
+  
