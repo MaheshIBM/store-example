@@ -1,3 +1,30 @@
+# Running the code.
+
+The modified code requires a backend json server running on port 3000.
+Create a file called blogs.json with the following data.
+```{
+	"blogs" : [
+	{"title":"abc","author":"John"},
+	{ "title":"xyz", "author":"King"},
+	{"title":"Monkey blues", "author":"Kong"}
+	
+	]
+	,
+	"auth" : [{
+		"id":1, 
+		"isLoggedIn": true,
+                "roles": ["content-creator",
+                "manager"]
+	}]
+}
+```
+
+Install the json-serve dependency
+`npm install -g json-server`
+
+You need to run following command.
+`json-server --watch blogs.json`
+
 # ScUi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
