@@ -48,13 +48,12 @@ export function authReducer(state, action: Action) {
     console.log('authReducer: action', action.type);
     switch (action.type) {
         case '@ngrx/store/init':
-
             return new LogoutAction().auth;
         case 'LOGIN_SUCCESS':
             console.log('LOGIN_SUCCESS- old state', state);
             return (action as LoginSuccessAction).auth;
         case 'LOGOUT':
-        console.log('LOGIN', state);
+            console.log('LOGOUT', state);
             return (action as LogoutAction).auth;
         default:
             return state;

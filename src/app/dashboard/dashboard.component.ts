@@ -10,7 +10,8 @@ import { Error } from './reducers/errorreducer';
 
 
 @Component({
-  templateUrl: 'dashboard.component.html'
+  templateUrl: 'dashboard.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
 
@@ -19,7 +20,7 @@ export class DashboardComponent {
   error: Error = {message: ''};
   appTestName = 'Tutorial';
 
-  constructor(private store$: Store<AppState>, private zone: NgZone, private authService: AuthService) {
+  constructor(private store$: Store<AppState>, private zone: NgZone, private authService: AuthService, private cd: ChangeDetectorRef) {
     // this.store.subscribe(state => this.zone.run(() => this.handleStateChange(state)));
     console.log('service', this.authService);
     console.log('store', store$);
@@ -49,6 +50,7 @@ export class DashboardComponent {
     } else {
       this.buttonText = 'Login';
     }
+    this.cd.markForCheck();
   }
 
 

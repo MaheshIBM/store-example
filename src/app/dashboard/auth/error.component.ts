@@ -5,7 +5,8 @@ import { Error } from '../reducers/errorreducer';
 
 @Component({
     selector: 'app-error',
-    templateUrl: 'error.component.html'
+    templateUrl: 'error.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 

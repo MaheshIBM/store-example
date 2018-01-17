@@ -4,4 +4,9 @@ export const navigation = [
     url: '/dashboard',
     icon: 'icon-speedometer',
   },
+  {
+    name: 'Zone demo',
+    url: '/zonedemo',
+    icon: 'icon-magic-wand',
+  }
 ];

@@ -75,6 +75,7 @@ import { AuthService } from './dashboard/services/authservice';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthEffects } from './dashboard/effects/autheffects';
 import { FormsModule } from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 /** import of all the custom Created components -- ENDS **/
 
 @NgModule({
@@ -95,6 +96,7 @@ import { FormsModule } from '@angular/forms';
     StoreModule.forRoot(reducers),
     HttpClientModule,
     EffectsModule.forRoot([AuthEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 50 }) ,
     FormsModule
   ],
   providers: [AuthService],

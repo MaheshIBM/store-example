@@ -6,6 +6,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { AuthComponent } from './auth/auth.component';
 import { ErrorComponent } from './auth/error.component';
 import {TestComponent} from './auth/test.component';
+import { ZoneDemoComponent } from './auth/zonedemo.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, Auth, AppState } from './reducers';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [ DashboardComponent,
     AuthComponent,
      ErrorComponent,
-    TestComponent]
+    TestComponent,
+  ZoneDemoComponent]
 })
 export class DashboardModule { }
