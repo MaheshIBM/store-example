@@ -44,8 +44,4 @@ export class AuthComponent {
             // this.store.dispatch({ type: 'LOG_IN' });
         }
     }
-
-    rxTest(event) {
-        console.log('clicked', event);
-    }
 }
