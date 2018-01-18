@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef, Input, Output, E
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Error } from '../reducers/errorreducer';
+import { AppState, Auth } from '../reducers/index';
 
 @Component({
     selector: 'app-error',
@@ -13,6 +14,10 @@ import { Error } from '../reducers/errorreducer';
 export class ErrorComponent {
     @Input()
     error: Error;
+
+    constructor(private store$: Store<AppState>) {
+        store$.subscribe((state) => {});
+    }
 }
 
 

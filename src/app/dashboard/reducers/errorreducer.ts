@@ -33,8 +33,8 @@ export class ClearErrorAction implements Action {
     }
 
 }
-export function errorReducer(state, action: Action) {
-    console.log('authReducer: action', action.type);
+export function errorReducer(state: Error, action: Action): Error {
+    console.log('errorReducer: action', action.type);
     switch (action.type) {
         case '@ngrx/store/init':
             return { message: ''};

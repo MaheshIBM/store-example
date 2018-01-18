@@ -26,15 +26,15 @@ export class TestComponent {
 
     appTestClick(event) {
         this.count = this.count + 1;
-        if (this.count % 2 === 0) {
+        /* if (this.count % 2 === 0) {
             this.store$.dispatch(new TestErrorAction(
                 { message: 'An error has happened' })
             );
         } else {
             this.store$.dispatch(new ClearErrorAction());
-        }
+        } */
         console.log('Button was clicked');
         this.appButtonClicked.emit({ event });
-
+        
     }
 }

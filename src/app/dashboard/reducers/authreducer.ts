@@ -44,7 +44,7 @@ export class LogoutAction implements Action {
 
 
 
-export function authReducer(state, action: Action) {
+export function authReducer(state: Auth, action: Action): Auth {
     console.log('authReducer: action', action.type);
     switch (action.type) {
         case '@ngrx/store/init':
